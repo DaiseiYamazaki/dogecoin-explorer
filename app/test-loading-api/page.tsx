@@ -1,6 +1,7 @@
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/slow-data")
-  return res.json()
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const res = await fetch(`${API_URL}/api/slow-data`);
+  return res.json();
 }
 
 export default async function TestLoadingAPIPage() {

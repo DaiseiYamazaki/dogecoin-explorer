@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: 46 65% 48%;
+    --brand-foreground: 0 0% 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-outfit);
+    letter-spacing: -0.02em;
+  }
+}
+
+.animate-in {
+  animation: animate-in 0.5s ease-out;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(194, 166, 51, 0.1);
+}
+
